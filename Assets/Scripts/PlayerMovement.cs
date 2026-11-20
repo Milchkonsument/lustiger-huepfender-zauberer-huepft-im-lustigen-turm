@@ -7,55 +7,97 @@ public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
+    public Vector2 wallJumpForce = new Vector2(10f, 13f);
+    public float wallJumpLockDuration = 0.15f;
+    
     private Rigidbody2D _rb;
     private InputAction moveAction;
-    private float _inputY;
+    private InputAction jumpAction;
     private float _inputX;
-    [SerializeField] private bool _isGrounded;
-    private bool _isTouchingWall;
+    private bool _jumping;
+    private float _wallJumpLockTimer;
+    
+    private LayerMask _groundLayer;
+    private Transform _groundChecker;
+    private Transform _leftWallChecker;
+    private Transform _rightWallChecker;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
+        _groundChecker = transform.Find("GroundChecker");
+        _leftWallChecker = transform.Find("LeftWallChecker");
+        _rightWallChecker = transform.Find("RightWallChecker");
+        
         moveAction = InputSystem.actions.FindAction("Player/Movement");
+        jumpAction = InputSystem.actions.FindAction("Player/Jump");
+        
+        _groundLayer = LayerMask.GetMask("Ground");
+    }
+
+    private void Update()
+    {
+        _inputX = moveAction.ReadValue<Vector2>().x;
+        if (jumpAction.triggered)
+        {
+            _jumping = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        _inputX = moveAction.ReadValue<Vector2>().x;
-        _inputY = moveAction.ReadValue<Vector2>().y;
-        _rb.linearVelocity = new Vector2(_inputX * speed,0);
-       /* if (_rb.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (_wallJumpLockTimer > 0)
         {
-            _rb.AddForce(new Vector2(0, inputY * jumpForce), ForceMode2D.Impulse);
-        }*/
-       if (_isGrounded && _isTouchingWall.Equals(false))
-       {
-           _rb.AddForce(new Vector2(0, _inputY * jumpForce), ForceMode2D.Impulse);
-       }
+            _wallJumpLockTimer -= Time.fixedDeltaTime;
+        }
+        else
+        {
+            //left to right movement
+            _rb.linearVelocity = new Vector2(_inputX * speed, _rb.linearVelocity.y);
+        }
+
+
+
+
+        //jumping
+        if (_jumping)
+        {
+            if (_isGrounded())
+            {
+                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
+                _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+            else if (_isTouchingLeftWall())
+            {
+                _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
+                _wallJumpLockTimer = wallJumpLockDuration;
+            }
+            else if (_isTouchingRightWall())
+            {
+                _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
+                _wallJumpLockTimer = wallJumpLockDuration;
+            }
+
+            _jumping = false;
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+
+    private bool _isGrounded()
     {
-        
-        print("collision at: " + other.contacts[0].normal);
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && other.contacts[0].normal.y > 0)
-        {
-            _isGrounded = true;
-        }
-
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") && other.contacts[0].normal.x != 0)
-        {
-            _isTouchingWall = false;
-        }
+        return Physics2D.OverlapCircle(_groundChecker.position, 0.2f, _groundLayer);
     }
-
-    private void OnCollisionExit2D(Collision2D other)
+    
+    private bool _isTouchingLeftWall()
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Ground") )
-        {
-            _isGrounded = false;
-        }
+        return Physics2D.OverlapCircle(_leftWallChecker.position, 0.2f, _groundLayer);
     }
+
+    private bool _isTouchingRightWall()
+    {
+        return Physics2D.OverlapCircle(_rightWallChecker.position, 0.2f, _groundLayer);
+    }
+    
 }
