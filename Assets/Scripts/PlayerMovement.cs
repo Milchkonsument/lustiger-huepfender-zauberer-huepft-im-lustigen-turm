@@ -207,12 +207,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool _isTouchingLeftWall()
     {
-        return Physics2D.OverlapCircle(_leftWallChecker.position, 0.2f, _groundLayer);
+        return Physics2D.OverlapCircle(_leftWallChecker.position, 0.3f, _groundLayer);
     }
 
     private bool _isTouchingRightWall()
     {
-        return Physics2D.OverlapCircle(_rightWallChecker.position, 0.2f, _groundLayer);
+        return Physics2D.OverlapCircle(_rightWallChecker.position, 0.3f, _groundLayer);
     }
 
     // ANIMATION

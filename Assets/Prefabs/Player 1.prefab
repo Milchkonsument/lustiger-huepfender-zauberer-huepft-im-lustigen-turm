@@ -74,8 +74,8 @@ GameObject:
   - component: {fileID: 2061728472977767327}
   - component: {fileID: 6413338663597070836}
   - component: {fileID: 8846862796373601043}
-  - component: {fileID: 7864455232225929460}
   - component: {fileID: 8985007109113457642}
+  - component: {fileID: 835208581471318045}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -173,9 +173,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3a3b9fd4566a743a361375cb170a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 3
-  jumpForce: 20
-  wallJumpForce: {x: 10, y: 13}
+  speed: 7
+  jumpForce: 25
+  wallJumpForce: {x: 10, y: 16}
   wallJumpLockDuration: 0.15
   isUsingAbility: 0
   nadelprefab: {fileID: 5171896507975699735, guid: 6ffe2b9757bd8dd4284876463cf04e17, type: 3}
@@ -226,8 +226,30 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7864455232225929460
-BoxCollider2D:
+--- !u!95 &8985007109113457642
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3291905638540116226}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6dd023e4826e7f4aa20f12549faa0b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &835208581471318045
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -260,40 +282,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!95 &8985007109113457642
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3291905638540116226}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c6dd023e4826e7f4aa20f12549faa0b8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Offset: {x: 0, y: -0.2350477}
+  m_Radius: 0.2649523
 --- !u!1 &4556379577526403662
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +365,7 @@ MonoBehaviour:
   purpleHatSprite: {fileID: -8140568687206083934, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   redHatSprite: {fileID: -7313524825897280498, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 1255586332865947568, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
+  noneSprite: {fileID: 0}
   hatColor: 0
   animator: {fileID: 654368284555425148}
   noneIdle: {fileID: 0}

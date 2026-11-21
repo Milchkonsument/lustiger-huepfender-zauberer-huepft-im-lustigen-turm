@@ -4,7 +4,7 @@ using UnityEngine.LowLevelPhysics;
 public class SelfDestroy : MonoBehaviour
 {
     private GameObject _player;
-    private float _selfDestroyDistance = 15f;
+    public float _selfDestroyDistance = 30f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
