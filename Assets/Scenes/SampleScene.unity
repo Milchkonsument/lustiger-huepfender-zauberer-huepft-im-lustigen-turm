@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 1017858916}
   - component: {fileID: 1017858919}
   - component: {fileID: 1017858920}
+  - component: {fileID: 1017858921}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -545,6 +546,23 @@ MonoBehaviour:
   jumpForce: 20
   wallJumpForce: {x: 10, y: 13}
   wallJumpLockDuration: 0.15
+  facingDirection: 1
+  movementState: 0
+  animator: {fileID: 1017858921}
+  animIdleLeft: {fileID: 7400000, guid: b9073ec339cf6be41b6cd3d50da2478d, type: 2}
+  animRunLeft: {fileID: 7400000, guid: b2e5be38957a26449a87b6512d43367d, type: 2}
+  animJumpLeft: {fileID: 7400000, guid: 30859b21555e17641ae42a6cf4e4a518, type: 2}
+  animJumpIdleLeft: {fileID: 7400000, guid: e784ec5f170801040b272e6e3a7dec66, type: 2}
+  animJumpToWallLeft: {fileID: 7400000, guid: 40f3f702a70d3d14e9b633ef486e18f1, type: 2}
+  animJumpFromWallLeft: {fileID: 7400000, guid: e186b525ef3cb7d4a9c7308bc039bf0e, type: 2}
+  animHangWallIdleLeft: {fileID: 7400000, guid: 6cc3df01c696ec1449850ddeb4065e96, type: 2}
+  animIdleRight: {fileID: 7400000, guid: c1d5e835b9435234087aed308d6af794, type: 2}
+  animRunRight: {fileID: 7400000, guid: f453b4c0e26815f4aac93b8477f30d21, type: 2}
+  animJumpRight: {fileID: 7400000, guid: 9ba00f9a3867feb4db1db625b4532f62, type: 2}
+  animJumpIdleRight: {fileID: 7400000, guid: 0e5a0ea4f4ba99f43a23ab53feac5264, type: 2}
+  animJumpToWallRight: {fileID: 7400000, guid: b21d845261c2e9a45a1d054b575aab84, type: 2}
+  animJumpFromWallRight: {fileID: 7400000, guid: a4efaf415ca361142be106b0b54c5963, type: 2}
+  animHangWallIdleRight: {fileID: 7400000, guid: 417783e16466d0749bf7addd7455ca72, type: 2}
 --- !u!212 &1017858917
 SpriteRenderer:
   serializedVersion: 2
@@ -695,6 +713,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1017858921
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017858915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6dd023e4826e7f4aa20f12549faa0b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1177715813
 GameObject:
   m_ObjectHideFlags: 0
