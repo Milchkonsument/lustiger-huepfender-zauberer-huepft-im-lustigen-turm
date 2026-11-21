@@ -10,6 +10,8 @@ public class ScissorsEnemyController : MonoBehaviour
         if (player == null)
             return;
 
+        AudioManager.Instance.PlaySFX("Hit");
+
         if (player.hatController.hatColor == HatColor.None)
         {
             GameManager.I.EndGame();

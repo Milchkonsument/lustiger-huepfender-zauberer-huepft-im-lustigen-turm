@@ -75,6 +75,9 @@ MonoBehaviour:
   - name: UI_Click
     clip: {fileID: 8300000, guid: ee410549779185a40b7c2223f116d298, type: 3}
     loop: 0
+  - name: Hit
+    clip: {fileID: 8300000, guid: 516cb22466f41ae48b9102d338bb533e, type: 3}
+    loop: 0
   musicSource: {fileID: 6298803301171619844}
   sfxSource: {fileID: 3738038193201883443}
   MusicVolume: 1
