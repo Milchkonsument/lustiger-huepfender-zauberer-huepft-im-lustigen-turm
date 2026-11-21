@@ -12,11 +12,12 @@ public class GameManager : Singleton<GameManager>
     public int MaxObstaclesPerRow = 3;
     public Vector2 ObstacleSpacing = Vector2.one;
     public float ObstacleWallPadding = 1f;
+    public float NoiseScale = 1f;
 
     [Header("Components")]
     public SpriteRenderer _bounds;
     public PlayerMovement Player;
-    public float NoiseScale = 1f;
+    public TMPro.TextMeshProUGUI CurrentScoreText;
 
     // ---------------------------
 
@@ -55,6 +56,12 @@ public class GameManager : Singleton<GameManager>
     {
         UpdateMaxPlayerHeight();
         UpdateObstacles();
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        CurrentScoreText.text = Mathf.RoundToInt(_currentPlayerMaxHeight).ToString();
     }
 
     private void UpdateObstacles()

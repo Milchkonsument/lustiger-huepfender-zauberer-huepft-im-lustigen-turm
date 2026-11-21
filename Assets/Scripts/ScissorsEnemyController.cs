@@ -19,6 +19,6 @@ public class ScissorsEnemyController : MonoBehaviour
             player.hatController.PlayDissovleAnimation();
         }
 
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }

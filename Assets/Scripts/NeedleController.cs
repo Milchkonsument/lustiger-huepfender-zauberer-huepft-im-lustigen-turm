@@ -6,6 +6,8 @@ public class NeedleController : MonoBehaviour
     private InputAction _moveAction;
     public int abilitySteps;
     public float abilityDelay = 0.0001f;
+    public float timeScale = 0.1f;
+
     private float _nextmoveTime;
     private InputAction _upAction;
     private Transform targetPosition;
@@ -13,7 +15,7 @@ public class NeedleController : MonoBehaviour
     private Transform _playerTransform;
     private PlayerMovement _playerMovement;
     private CameraController _mainCameraController;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,10 +34,12 @@ public class NeedleController : MonoBehaviour
     {
         if (_playerMovement.isUsingAbility)
         {
+            Time.timeScale = timeScale;
+
             if (_upAction.IsPressed() && Time.time >= _nextmoveTime)
             {
                 abilitySteps--;
-                
+
                 transform.position = new Vector3(transform.position.x, transform.position.y + _gridSize,
                     transform.position.z);
                 _nextmoveTime = Time.time + abilityDelay;
@@ -45,11 +49,11 @@ public class NeedleController : MonoBehaviour
             {
                 abilitySteps--;
                 transform.position = new Vector3(transform.position.x + _moveAction.ReadValue<Vector2>().x * _gridSize,
-                    transform.position.y, transform.position.z);
+                    transform.position.y + _moveAction.ReadValue<Vector2>().y * _gridSize, transform.position.z);
                 _nextmoveTime = Time.time + abilityDelay;
             }
         }
-        
+
         if (abilitySteps <= 0)
         {
             EndAbility();
@@ -58,9 +62,10 @@ public class NeedleController : MonoBehaviour
 
     public void EndAbility()
     {
+        Time.timeScale = 1f;
         _playerMovement.setAbility(false);
         _playerTransform.position = transform.position;
         Destroy(gameObject);
     }
-    
+
 }

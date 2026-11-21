@@ -25,7 +25,7 @@ public class Obstacle : MonoBehaviour
         if (collision.gameObject.name == "Deadzone")
         {
             Debug.Log("Destroy");
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }

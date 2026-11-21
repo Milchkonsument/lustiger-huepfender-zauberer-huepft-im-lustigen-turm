@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
   Name: Sofa Brown
-  Difficulty: 0
+  Difficulty: 6
 --- !u!61 &2951662679952248895
 BoxCollider2D:
   m_ObjectHideFlags: 0
