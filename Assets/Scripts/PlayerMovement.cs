@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public Vector2 wallJumpForce = new Vector2(10f, 13f);
     public float wallJumpLockDuration = 0.15f;
-
+    public bool isUsingAbility;
+    public GameObject nadelprefab;
+    
     private Rigidbody2D _rb;
     private InputAction moveAction;
     private InputAction jumpAction;
+    private InputAction abilityAction;
     private float _inputX;
     private bool _jumping;
     private float _wallJumpLockTimer;
@@ -72,6 +75,7 @@ public class PlayerMovement : MonoBehaviour
 
         moveAction = InputSystem.actions.FindAction("Player/Movement");
         jumpAction = InputSystem.actions.FindAction("Player/Jump");
+        abilityAction = InputSystem.actions.FindAction("Player/Ability");
 
         _groundLayer = LayerMask.GetMask("Ground");
     }
@@ -81,47 +85,55 @@ public class PlayerMovement : MonoBehaviour
         _inputX = moveAction.ReadValue<Vector2>().x;
 
         UpdateMovementState();
-        UpdateMoveAnimation(); 
+        UpdateMoveAnimation();
+
+        if (abilityAction.triggered && !isUsingAbility)
+        {
+            StartNadelAbillity();
+        }
     }
 
     private void FixedUpdate()
     {
-        if (_wallJumpLockTimer > 0)
+        if (!isUsingAbility)
         {
-            _wallJumpLockTimer -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            //left to right movement
-            _rb.linearVelocity = new Vector2(_inputX * speed, _rb.linearVelocity.y);
-        }
-
-
-        //jumping
-        if (_jumping)
-        {
-            if (_isGrounded())
+            if (_wallJumpLockTimer > 0)
             {
-                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
-                _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                PlayJumpAnimation();
+                _wallJumpLockTimer -= Time.fixedDeltaTime;
             }
-            else if (_isTouchingLeftWall())
+            else
             {
-                animator.Play(animJumpFromWallRight.name);
-                facingDirection = FacingDirection.Right;
-                _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
-                _wallJumpLockTimer = wallJumpLockDuration;
-            }
-            else if (_isTouchingRightWall())
-            {
-                animator.Play(animJumpFromWallLeft.name);
-                facingDirection = FacingDirection.Left;
-                _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
-                _wallJumpLockTimer = wallJumpLockDuration;
+                //left to right movement
+                _rb.linearVelocity = new Vector2(_inputX * speed, _rb.linearVelocity.y);
             }
 
-            _jumping = false;
+
+            //jumping
+            if (_jumping)
+            {
+                if (_isGrounded())
+                {
+                    _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
+                    _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    PlayJumpAnimation();
+                }
+                else if (_isTouchingLeftWall())
+                {
+                    animator.Play(animJumpFromWallRight.name);
+                    facingDirection = FacingDirection.Right;
+                    _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
+                    _wallJumpLockTimer = wallJumpLockDuration;
+                }
+                else if (_isTouchingRightWall())
+                {
+                    animator.Play(animJumpFromWallLeft.name);
+                    facingDirection = FacingDirection.Left;
+                    _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
+                    _wallJumpLockTimer = wallJumpLockDuration;
+                }
+
+                _jumping = false;
+            }
         }
     }
 
@@ -239,5 +251,17 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.Play(animJumpLeft.name);
         }
+    }
+
+    private void StartNadelAbillity()
+    {
+        //time in slowmotion machen
+        isUsingAbility = true;
+        Instantiate(nadelprefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+    }
+
+    public void setAbility(bool value)
+    {
+        isUsingAbility = value;
     }
 }

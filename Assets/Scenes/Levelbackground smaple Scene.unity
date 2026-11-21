@@ -1223,6 +1223,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 827820957355797515, guid: a79c2ade6016ff0c3b588d8804b70058, type: 3}
+      propertyPath: nadelprefab
+      value: 
+      objectReference: {fileID: 5171896507975699735, guid: 6ffe2b9757bd8dd4284876463cf04e17, type: 3}
+    - target: {fileID: 827820957355797515, guid: a79c2ade6016ff0c3b588d8804b70058, type: 3}
       propertyPath: wallJumpForce.x
       value: 10
       objectReference: {fileID: 0}

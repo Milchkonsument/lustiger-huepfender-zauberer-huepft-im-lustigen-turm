@@ -114,6 +114,8 @@ MonoBehaviour:
   jumpForce: 20
   wallJumpForce: {x: 10, y: 13}
   wallJumpLockDuration: 0.15
+  isUsingAbility: 0
+  nadelprefab: {fileID: 5171896507975699735, guid: 6ffe2b9757bd8dd4284876463cf04e17, type: 3}
   facingDirection: 1
   movementState: 0
   animator: {fileID: 7204440979284447896}
