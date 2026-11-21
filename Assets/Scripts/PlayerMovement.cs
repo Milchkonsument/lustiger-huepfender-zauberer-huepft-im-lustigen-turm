@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float wallJumpLockDuration = 0.15f;
     public bool isUsingAbility;
     public GameObject nadelprefab;
-    
+
     private Rigidbody2D _rb;
     private InputAction moveAction;
     private InputAction jumpAction;
@@ -306,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
         //time in slowmotion machen
         isUsingAbility = true;
         AudioManager.Instance.PlaySFX("Sewing");
-        Instantiate(nadelprefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+        Instantiate(nadelprefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
     }
 
     public void setAbility(bool value)
