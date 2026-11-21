@@ -9,10 +9,13 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public Vector2 wallJumpForce = new Vector2(10f, 13f);
     public float wallJumpLockDuration = 0.15f;
-
+    public bool isUsingAbility;
+    public GameObject nadelprefab;
+    
     private Rigidbody2D _rb;
     private InputAction moveAction;
     private InputAction jumpAction;
+    private InputAction abilityAction;
     private float _inputX;
     private bool _jumping;
     private float _wallJumpLockTimer;
@@ -35,11 +38,19 @@ public class PlayerMovement : MonoBehaviour
         Jumping,
         WallHanging
     }
+    public enum HatColor
+    {
+        None,
+        Purple,
+        Red,
+        Blue
+    }
 
     public FacingDirection facingDirection = FacingDirection.Right;
     public MovemenState movementState = MovemenState.Idle;
 
     [SerializeField] protected Animator animator;
+
 
     // TODO put into scriptable object library
 
@@ -60,6 +71,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected AnimationClip animHangWallIdleRight;
 
 
+    public PlayerHatController hatController;
+    protected Vector3 originalHatPosition;
+    protected Vector3 hatJumpPosition;
+    protected Vector3 hatWallPosition;
+    public float hatHeightJumpOffset = 0.5f;
+    public float hatHeightWallOffset = 0.5f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -72,8 +90,17 @@ public class PlayerMovement : MonoBehaviour
 
         moveAction = InputSystem.actions.FindAction("Player/Movement");
         jumpAction = InputSystem.actions.FindAction("Player/Jump");
+        abilityAction = InputSystem.actions.FindAction("Player/Ability");
 
         _groundLayer = LayerMask.GetMask("Ground");
+
+        originalHatPosition = hatController.transform.localPosition;
+
+        hatJumpPosition = originalHatPosition;
+        hatJumpPosition.y += hatHeightJumpOffset;
+
+        hatWallPosition = originalHatPosition;
+        hatWallPosition.y += hatHeightWallOffset;
     }
 
     private void Update()
@@ -81,47 +108,55 @@ public class PlayerMovement : MonoBehaviour
         _inputX = moveAction.ReadValue<Vector2>().x;
 
         UpdateMovementState();
-        UpdateMoveAnimation(); 
+        UpdateMoveAnimation();
+
+        if (abilityAction.triggered && !isUsingAbility)
+        {
+            StartNadelAbillity();
+        }
     }
 
     private void FixedUpdate()
     {
-        if (_wallJumpLockTimer > 0)
+        if (!isUsingAbility)
         {
-            _wallJumpLockTimer -= Time.fixedDeltaTime;
-        }
-        else
-        {
-            //left to right movement
-            _rb.linearVelocity = new Vector2(_inputX * speed, _rb.linearVelocity.y);
-        }
-
-
-        //jumping
-        if (_jumping)
-        {
-            if (_isGrounded())
+            if (_wallJumpLockTimer > 0)
             {
-                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
-                _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                PlayJumpAnimation();
+                _wallJumpLockTimer -= Time.fixedDeltaTime;
             }
-            else if (_isTouchingLeftWall())
+            else
             {
-                animator.Play(animJumpFromWallRight.name);
-                facingDirection = FacingDirection.Right;
-                _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
-                _wallJumpLockTimer = wallJumpLockDuration;
-            }
-            else if (_isTouchingRightWall())
-            {
-                animator.Play(animJumpFromWallLeft.name);
-                facingDirection = FacingDirection.Left;
-                _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
-                _wallJumpLockTimer = wallJumpLockDuration;
+                //left to right movement
+                _rb.linearVelocity = new Vector2(_inputX * speed, _rb.linearVelocity.y);
             }
 
-            _jumping = false;
+
+            //jumping
+            if (_jumping)
+            {
+                if (_isGrounded())
+                {
+                    _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
+                    _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    PlayJumpAnimation();
+                }
+                else if (_isTouchingLeftWall())
+                {
+                    animator.Play(animJumpFromWallRight.name);
+                    facingDirection = FacingDirection.Right;
+                    _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
+                    _wallJumpLockTimer = wallJumpLockDuration;
+                }
+                else if (_isTouchingRightWall())
+                {
+                    animator.Play(animJumpFromWallLeft.name);
+                    facingDirection = FacingDirection.Left;
+                    _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
+                    _wallJumpLockTimer = wallJumpLockDuration;
+                }
+
+                _jumping = false;
+            }
         }
     }
 
@@ -185,6 +220,28 @@ public class PlayerMovement : MonoBehaviour
     // Play animation base don Movement State and Direction
     private void UpdateMoveAnimation()
     {
+        if (facingDirection == FacingDirection.Right)
+        {
+            hatController.hatSpriteRenderer.flipX = true;
+        }
+        else
+        {
+            hatController.hatSpriteRenderer.flipX = false;
+        }
+
+        if (movementState == MovemenState.Jumping)
+        {
+            hatController.gameObject.transform.localPosition = hatJumpPosition;
+        }
+        else if (movementState == MovemenState.WallHanging)
+        {
+            hatController.gameObject.transform.localPosition = hatWallPosition;
+        }
+        else
+        {
+            hatController.gameObject.transform.localPosition = originalHatPosition;
+        }
+
         switch (movementState)
         {
             case MovemenState.Idle:
@@ -239,5 +296,17 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.Play(animJumpLeft.name);
         }
+    }
+
+    private void StartNadelAbillity()
+    {
+        //time in slowmotion machen
+        isUsingAbility = true;
+        Instantiate(nadelprefab, transform.position + new Vector3(0,1,0), Quaternion.identity);
+    }
+
+    public void setAbility(bool value)
+    {
+        isUsingAbility = value;
     }
 }
