@@ -11,37 +11,37 @@ public class HatItem : MonoBehaviour
     [SerializeField] protected Sprite redHatSprite;
     [SerializeField] protected Sprite blueHatSprite;
 
-    [SerializeField] protected SpriteRenderer hatSprite;
+    [SerializeField] protected SpriteRenderer hatSpriteRenderer;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerMovement player = collision.gameObject.GetComponent<PlayerMovement>();
 
         if (player == null)
             return;
 
-        player.hatController.SetHat(hatColor);
+        player.hatController.AddHat();
 
         // TODO Animation?
         Destroy(gameObject);
     }
     void Start()
     {
-        SetColor(hatColor);
+        SetColor((HatColor)Random.Range(0, 4));
     }
 
     protected void SetColor(HatColor color)
     {
-        switch(color)
+        switch (color)
         {
             case HatColor.Purple:
-                hatSprite.sprite = purpleHatSprite;
+                hatSpriteRenderer.sprite = purpleHatSprite;
                 break;
             case HatColor.Red:
-                hatSprite.sprite = redHatSprite;
+                hatSpriteRenderer.sprite = redHatSprite;
                 break;
             case HatColor.Blue:
-                hatSprite.sprite = blueHatSprite;
+                hatSpriteRenderer.sprite = blueHatSprite;
                 break;
         }
         hatColor = color;

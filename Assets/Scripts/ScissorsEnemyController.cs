@@ -12,11 +12,13 @@ public class ScissorsEnemyController : MonoBehaviour
 
         if (player.hatController.hatColor == HatColor.None)
         {
-            // TODO kill player
+            GameManager.I.EndGame();
         }
         else
         {
             player.hatController.PlayDissovleAnimation();
         }
+
+        Destroy(this);
     }
 }

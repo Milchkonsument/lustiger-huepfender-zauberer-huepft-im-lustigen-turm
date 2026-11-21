@@ -27,6 +27,12 @@ public class GameManager : Singleton<GameManager>
     private MonoList<Obstacle> _currentObstacleInstances = new();
     private float _lastGeneratedHeight = 0f;
 
+    public void EndGame()
+    {
+        // TODO show UI
+        RestartGame();
+    }
+
     public void RestartGame()
     {
         _currentObstacleInstances.ClearAndDestroy();
