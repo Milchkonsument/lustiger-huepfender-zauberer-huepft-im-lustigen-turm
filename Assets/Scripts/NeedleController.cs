@@ -53,6 +53,7 @@ public class NeedleController : MonoBehaviour
     {
         _playerMovement.setAbility(false);
         _playerTransform.position = transform.position;
+        _playerMovement.hatController.
         Destroy(gameObject);
     }
     
