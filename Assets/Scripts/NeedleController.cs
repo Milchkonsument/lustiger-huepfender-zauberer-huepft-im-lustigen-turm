@@ -12,6 +12,7 @@ public class NeedleController : MonoBehaviour
     private float _gridSize;
     private Transform _playerTransform;
     private PlayerMovement _playerMovement;
+    private CameraController _mainCameraController;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +23,8 @@ public class NeedleController : MonoBehaviour
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         _playerMovement = _playerTransform.GetComponent<PlayerMovement>();
         _playerMovement.hatController.PlayDissovleAnimation();
-        
+        _mainCameraController = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
+        _mainCameraController.needle = this.gameObject;
     }
 
     // Update is called once per frame

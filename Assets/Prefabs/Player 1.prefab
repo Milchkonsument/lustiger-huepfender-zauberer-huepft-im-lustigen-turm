@@ -366,7 +366,7 @@ MonoBehaviour:
   redHatSprite: {fileID: -7313524825897280498, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 1255586332865947568, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   noneSprite: {fileID: 0}
-  hatColor: 0
+  hatColor: 1
   animator: {fileID: 654368284555425148}
   noneIdle: {fileID: 7400000, guid: 77dbd7eed2d0c8e49a67ac4de17bf625, type: 2}
   purpleIdle: {fileID: 7400000, guid: fd4b94e20b244af44867094328d94158, type: 2}
