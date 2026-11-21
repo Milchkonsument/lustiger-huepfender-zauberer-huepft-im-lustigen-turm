@@ -5,6 +5,8 @@ public class NeedleController : MonoBehaviour
 {
     private InputAction _moveAction;
     public int abilitySteps;
+    public float abilityDelay = 0.0001f;
+    private float _nextmoveTime;
     private InputAction _upAction;
     private Transform targetPosition;
     private float _gridSize;
@@ -19,6 +21,7 @@ public class NeedleController : MonoBehaviour
         _gridSize = this.GetComponent<SpriteRenderer>().bounds.size.y;
         _playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         _playerMovement = _playerTransform.GetComponent<PlayerMovement>();
+        _playerMovement.hatController.PlayDissovleAnimation();
         
     }
 
@@ -27,19 +30,21 @@ public class NeedleController : MonoBehaviour
     {
         if (_playerMovement.isUsingAbility)
         {
-            if (_upAction.triggered)
+            if (_upAction.IsPressed() && Time.time >= _nextmoveTime)
             {
                 abilitySteps--;
                 
                 transform.position = new Vector3(transform.position.x, transform.position.y + _gridSize,
                     transform.position.z);
+                _nextmoveTime = Time.time + abilityDelay;
             }
 
-            if (_moveAction.triggered)
+            if (_moveAction.IsPressed() && Time.time >= _nextmoveTime)
             {
                 abilitySteps--;
                 transform.position = new Vector3(transform.position.x + _moveAction.ReadValue<Vector2>().x * _gridSize,
                     transform.position.y, transform.position.z);
+                _nextmoveTime = Time.time + abilityDelay;
             }
         }
         

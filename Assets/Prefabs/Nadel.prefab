@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4274c32d344aaf54c9bf7778dabb7eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  abilitySteps: 10
+  abilitySteps: 20
+  abilityDelay: 0.1
 --- !u!1 &7144074168196981234
 GameObject:
   m_ObjectHideFlags: 0

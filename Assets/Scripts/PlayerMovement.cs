@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateMovementState();
         UpdateMoveAnimation();
 
-        if (abilityAction.triggered && !isUsingAbility)
+        if (abilityAction.triggered && !isUsingAbility && !hatController.hatColor.Equals(HatColor.None))
         {
             StartNadelAbillity();
         }
