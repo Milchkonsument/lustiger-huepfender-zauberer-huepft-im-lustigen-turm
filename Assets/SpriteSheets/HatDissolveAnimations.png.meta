@@ -1,0 +1,861 @@
+fileFormatVersion: 2
+guid: 83d3cb1a34d40cf4b9f057bfeb996aed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1426392110718634684
+    second: HatDissolveAnimations_0
+  - first:
+      213: -4655415848422221610
+    second: HatDissolveAnimations_1
+  - first:
+      213: -1624300857340784131
+    second: HatDissolveAnimations_2
+  - first:
+      213: 3563782385313938204
+    second: HatDissolveAnimations_3
+  - first:
+      213: 78466156074507792
+    second: HatDissolveAnimations_4
+  - first:
+      213: 4463795348608070450
+    second: HatDissolveAnimations_5
+  - first:
+      213: -3306474501544182471
+    second: HatDissolveAnimations_6
+  - first:
+      213: 6801468132759268187
+    second: HatDissolveAnimations_7
+  - first:
+      213: 5722576225095481654
+    second: HatDissolveAnimations_8
+  - first:
+      213: 3949327776420351530
+    second: HatDissolveAnimations_9
+  - first:
+      213: 862406310201570082
+    second: HatDissolveAnimations_10
+  - first:
+      213: 3125725192685180783
+    second: HatDissolveAnimations_11
+  - first:
+      213: 7606274802767786406
+    second: HatDissolveAnimations_12
+  - first:
+      213: 173568361416548491
+    second: HatDissolveAnimations_13
+  - first:
+      213: 6147930736369151407
+    second: HatDissolveAnimations_14
+  - first:
+      213: -8503848770632129246
+    second: HatDissolveAnimations_15
+  - first:
+      213: 3784385293486709790
+    second: HatDissolveAnimations_16
+  - first:
+      213: 5331121971239063350
+    second: HatDissolveAnimations_17
+  - first:
+      213: 84685586463583229
+    second: HatDissolveAnimations_18
+  - first:
+      213: -4375820117404689576
+    second: HatDissolveAnimations_19
+  - first:
+      213: -6548696943672441209
+    second: HatDissolveAnimations_20
+  - first:
+      213: 5179207953069049389
+    second: HatDissolveAnimations_21
+  - first:
+      213: 6576733451907395019
+    second: HatDissolveAnimations_22
+  - first:
+      213: 5934107079502078293
+    second: HatDissolveAnimations_23
+  - first:
+      213: -3370718094360784092
+    second: HatDissolveAnimations_24
+  - first:
+      213: -6033175708522043166
+    second: HatDissolveAnimations_25
+  - first:
+      213: -353922683076520044
+    second: HatDissolveAnimations_26
+  - first:
+      213: 2725388779284120131
+    second: HatDissolveAnimations_27
+  - first:
+      213: -1678304225596489183
+    second: HatDissolveAnimations_28
+  - first:
+      213: 3117191675312345981
+    second: HatDissolveAnimations_29
+  - first:
+      213: -8154326175507341581
+    second: HatDissolveAnimations_30
+  - first:
+      213: 6810905690613094806
+    second: HatDissolveAnimations_31
+  - first:
+      213: 554014279033708504
+    second: HatDissolveAnimations_32
+  - first:
+      213: 2868044026151129132
+    second: HatDissolveAnimations_33
+  - first:
+      213: 840195062952034793
+    second: HatDissolveAnimations_34
+  - first:
+      213: 850739430063370033
+    second: HatDissolveAnimations_35
+  - first:
+      213: -4095365949782156508
+    second: HatDissolveAnimations_36
+  - first:
+      213: -1101352045373193562
+    second: HatDissolveAnimations_37
+  - first:
+      213: 1587784395587600090
+    second: HatDissolveAnimations_38
+  - first:
+      213: 2493714767163378291
+    second: HatDissolveAnimations_39
+  - first:
+      213: 4061617742979704997
+    second: HatDissolveAnimations_40
+  - first:
+      213: -5078525987426858160
+    second: HatDissolveAnimations_41
+  - first:
+      213: -8060079129807841407
+    second: HatDissolveAnimations_42
+  - first:
+      213: 5957707241471746272
+    second: HatDissolveAnimations_43
+  - first:
+      213: -6132542209686676005
+    second: HatDissolveAnimations_44
+  - first:
+      213: -8924133083793637343
+    second: HatDissolveAnimations_45
+  - first:
+      213: 6483897926729505490
+    second: HatDissolveAnimations_46
+  - first:
+      213: -628733028007968253
+    second: HatDissolveAnimations_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HatDissolveAnimations_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbacdcd31109bc310800000000000000
+      internalID: 1426392110718634684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8d11983f3a46fb0800000000000000
+      internalID: -4655415848422221610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df117d5e9f25579e0800000000000000
+      internalID: -1624300857340784131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b7e6d9239157130800000000000000
+      internalID: 3563782385313938204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e16bf9d84c61100800000000000000
+      internalID: 78466156074507792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23333d7283692fd30800000000000000
+      internalID: 4463795348608070450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93d729495fa0d12d0800000000000000
+      internalID: -3306474501544182471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b61442b3ba36e50800000000000000
+      internalID: 6801468132759268187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63979e8d1ccaa6f40800000000000000
+      internalID: 5722576225095481654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e4e1f20b4dec630800000000000000
+      internalID: 3949327776420351530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223be9b48f1e7fb00800000000000000
+      internalID: 862406310201570082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f675d7f708ec06b20800000000000000
+      internalID: 3125725192685180783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a17af222aaee8960800000000000000
+      internalID: 7606274802767786406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_13
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80ea7e4183a86200800000000000000
+      internalID: 173568361416548491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad2dfc7e66d15550800000000000000
+      internalID: 6147930736369151407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_15
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22564d239924cf980800000000000000
+      internalID: -8503848770632129246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1cdc77bf56d48430800000000000000
+      internalID: 3784385293486709790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f0cf5ff23fbf940800000000000000
+      internalID: 5331121971239063350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfbe1ca971ddc2100800000000000000
+      internalID: 84685586463583229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85bd51d89c6f543c0800000000000000
+      internalID: -4375820117404689576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786c7b283da5e15a0800000000000000
+      internalID: -6548696943672441209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d260f84513e30e740800000000000000
+      internalID: 5179207953069049389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd6e5fba30454b50800000000000000
+      internalID: 6576733451907395019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5512ad4d2fe2a5250800000000000000
+      internalID: 5934107079502078293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423d4a380cdc831d0800000000000000
+      internalID: -3370718094360784092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HatDissolveAnimations_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8270288aad54ca0800000000000000
+      internalID: -6033175708522043166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 076f61e4168e72a4681eb37243664af3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      HatDissolveAnimations_0: 1426392110718634684
+      HatDissolveAnimations_1: -4655415848422221610
+      HatDissolveAnimations_10: 862406310201570082
+      HatDissolveAnimations_11: 3125725192685180783
+      HatDissolveAnimations_12: 7606274802767786406
+      HatDissolveAnimations_13: 173568361416548491
+      HatDissolveAnimations_14: 6147930736369151407
+      HatDissolveAnimations_15: -8503848770632129246
+      HatDissolveAnimations_16: 3784385293486709790
+      HatDissolveAnimations_17: 5331121971239063350
+      HatDissolveAnimations_18: 84685586463583229
+      HatDissolveAnimations_19: -4375820117404689576
+      HatDissolveAnimations_2: -1624300857340784131
+      HatDissolveAnimations_20: -6548696943672441209
+      HatDissolveAnimations_21: 5179207953069049389
+      HatDissolveAnimations_22: 6576733451907395019
+      HatDissolveAnimations_23: 5934107079502078293
+      HatDissolveAnimations_24: -3370718094360784092
+      HatDissolveAnimations_25: -6033175708522043166
+      HatDissolveAnimations_3: 3563782385313938204
+      HatDissolveAnimations_4: 78466156074507792
+      HatDissolveAnimations_5: 4463795348608070450
+      HatDissolveAnimations_6: -3306474501544182471
+      HatDissolveAnimations_7: 6801468132759268187
+      HatDissolveAnimations_8: 5722576225095481654
+      HatDissolveAnimations_9: 3949327776420351530
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
