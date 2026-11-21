@@ -1223,6 +1223,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 827820957355797515, guid: a79c2ade6016ff0c3b588d8804b70058, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 827820957355797515, guid: a79c2ade6016ff0c3b588d8804b70058, type: 3}
       propertyPath: wallJumpForce.x
       value: 10
       objectReference: {fileID: 0}
@@ -1285,11 +1289,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3844871730301388564, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.7180004
+      value: 5.989097
       objectReference: {fileID: 0}
     - target: {fileID: 3844871730301388564, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6411
+      value: 2.0056
       objectReference: {fileID: 0}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: Player
@@ -1297,11 +1301,15 @@ PrefabInstance:
       objectReference: {fileID: 996019757}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: SpawnRate
-      value: 0.1
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
+      propertyPath: NoiseScale
+      value: 3.165
       objectReference: {fileID: 0}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: ObstacleSpacing.x
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: ObstacleSpacing.y
@@ -1313,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: ObstacleWallPadding
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7097034645189492155, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TreeEditor;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -15,11 +16,11 @@ public class GameManager : Singleton<GameManager>
     [Header("Components")]
     public SpriteRenderer _bounds;
     public PlayerMovement Player;
+    public float NoiseScale = 1f;
 
     // ---------------------------
 
     private List<Obstacle> _obstaclePool;
-    private int _currentDifficulty = 0;
     private Vector2 _initialPlayerPos;
     private float _currentPlayerMaxHeight;
     private bool _isGameStarted = true;
@@ -41,13 +42,12 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
-        SpawnObstacles(_bounds.bounds.min.y, _bounds.bounds.max.y * 2);
+        SpawnObstacles(_bounds.bounds.min.y, _bounds.bounds.max.y * 200);
     }
 
     void Update()
     {
         UpdateMaxPlayerHeight();
-        UpdateHeightBasedGameProps();
         UpdateObstacles();
     }
 
@@ -65,7 +65,7 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateSpawnObstacles()
     {
-        if (_lastGeneratedHeight - Player.transform.position.y < _bounds.bounds.size.y)
+        if (_lastGeneratedHeight - Player.transform.position.y < _bounds.bounds.size.y * 2f)
         {
             SpawnObstacles(_lastGeneratedHeight, _lastGeneratedHeight + _bounds.bounds.size.y);
         }
@@ -76,35 +76,27 @@ public class GameManager : Singleton<GameManager>
         _currentPlayerMaxHeight = Mathf.Max(_currentPlayerMaxHeight, Player.transform.position.y);
     }
 
-    private void UpdateHeightBasedGameProps()
+    float GetDifficultyForHeight(float height)
     {
-        _currentDifficulty = Mathf.RoundToInt(_currentPlayerMaxHeight * DifficultyIncreaseByUnitClimbed);
+        return Mathf.RoundToInt(height * DifficultyIncreaseByUnitClimbed);
     }
 
     private void SpawnObstacles(float minY, float maxY)
     {
         _lastGeneratedHeight = maxY;
 
-        Debug.Log($"{minY} {maxY} // {_bounds.bounds.min.x} {_bounds.bounds.max.x}");
-
         for (float y = minY; y < maxY; y += ObstacleSpacing.y)
         {
             int cnt = 0;
 
-            // do
-            // {
-            for (float x = _bounds.bounds.min.x; x < _bounds.bounds.max.x; x += ObstacleSpacing.x)
+            for (float x = _bounds.bounds.min.x + ObstacleWallPadding; x < _bounds.bounds.max.x - ObstacleWallPadding; x += ObstacleSpacing.x)
             {
-                if (Random.Range(0f, 1f) < SpawnRate)
+                if (Mathf.PerlinNoise(9.456f + x * NoiseScale, y * NoiseScale) < SpawnRate)
                 {
                     cnt++;
-                    var o = Instantiate(_obstaclePool.Where(o => o.Difficulty <= _currentDifficulty).ToList().PickRandom());
-                    o.transform.position = new Vector3(x, y, 0f);
+                    var o = Instantiate(_obstaclePool.Where(o => o.Difficulty <= GetDifficultyForHeight(y)).ToList().PickRandom(), new Vector3(x, y, 0f), Quaternion.identity);
                 }
-
-                if (cnt >= MaxObstaclesPerRow) return;
             }
-            // } while (cnt < MinObstaclesPerRow);
         }
     }
 }
