@@ -67,8 +67,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 36a090565ee936d4ab271e73ff8f3cf1, type: 3}
     loop: 0
   - name: Sewing
-    clip: {fileID: 8300000, guid: 0385d674dc51d1846846b9337c68398b, type: 3}
+    clip: {fileID: 8300000, guid: 9d77b00b57bb4314eb994832411e1f3b, type: 3}
     loop: 1
+  - name: SewingFinished
+    clip: {fileID: 8300000, guid: 40362bfd9bcdb2fa5905050e3018decf, type: 3}
+    loop: 0
   - name: UI_Click
     clip: {fileID: 8300000, guid: ee410549779185a40b7c2223f116d298, type: 3}
     loop: 0

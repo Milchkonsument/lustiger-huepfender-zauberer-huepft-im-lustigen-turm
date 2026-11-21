@@ -21,6 +21,7 @@ public class HatItem : MonoBehaviour
             return;
 
         player.hatController.SetHat(hatColor);
+        AudioManager.Instance.PlaySFX("CollectHat");
 
         // TODO Animation?
         Destroy(gameObject);

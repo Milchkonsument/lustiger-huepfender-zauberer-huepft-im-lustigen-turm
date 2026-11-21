@@ -58,6 +58,9 @@ public class NeedleController : MonoBehaviour
 
     public void EndAbility()
     {
+        AudioManager.Instance.StopSFX();
+        AudioManager.Instance.PlaySFX("SewingFinished");
+
         _playerMovement.setAbility(false);
         _playerTransform.position = transform.position;
         Destroy(gameObject);
