@@ -375,15 +375,16 @@ MonoBehaviour:
   purpleHatSprite: {fileID: -8140568687206083934, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   redHatSprite: {fileID: -7313524825897280498, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 1255586332865947568, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
+  noneSprite: {fileID: 0}
   hatColor: 0
   animator: {fileID: 654368284555425148}
-  noneIdle: {fileID: 0}
-  purpleIdle: {fileID: 0}
-  redIdle: {fileID: 0}
-  blueIdle: {fileID: 0}
-  purpleToNoneAnim: {fileID: 0}
-  redToPurpleAnim: {fileID: 0}
-  blueToRedAnim: {fileID: 0}
+  noneIdle: {fileID: 7400000, guid: 77dbd7eed2d0c8e49a67ac4de17bf625, type: 2}
+  purpleIdle: {fileID: 7400000, guid: fd4b94e20b244af44867094328d94158, type: 2}
+  redIdle: {fileID: 7400000, guid: a37f2a3efdc3d5040adbed6231cae73f, type: 2}
+  blueIdle: {fileID: 7400000, guid: 09aed2b446bf5654191222d04c537663, type: 2}
+  purpleToNoneAnim: {fileID: 7400000, guid: 76946e79cc6e26d43b6975c793fab0f9, type: 2}
+  redToPurpleAnim: {fileID: 7400000, guid: 85cdcda3080e27141bb6df7978533bd0, type: 2}
+  blueToRedAnim: {fileID: 7400000, guid: 7d7108a73c9b77f48902394267900514, type: 2}
 --- !u!212 &8951144512431168903
 SpriteRenderer:
   serializedVersion: 2
