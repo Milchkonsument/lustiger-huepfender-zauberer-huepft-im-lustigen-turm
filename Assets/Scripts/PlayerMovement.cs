@@ -35,11 +35,19 @@ public class PlayerMovement : MonoBehaviour
         Jumping,
         WallHanging
     }
+    public enum HatColor
+    {
+        None,
+        Purple,
+        Red,
+        Blue
+    }
 
     public FacingDirection facingDirection = FacingDirection.Right;
     public MovemenState movementState = MovemenState.Idle;
 
     [SerializeField] protected Animator animator;
+
 
     // TODO put into scriptable object library
 
@@ -60,6 +68,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected AnimationClip animHangWallIdleRight;
 
 
+    public PlayerHatController hatController;
+    protected Vector3 originalHatPosition;
+    protected Vector3 hatJumpPosition;
+    protected Vector3 hatWallPosition;
+    public float hatHeightJumpOffset = 0.5f;
+    public float hatHeightWallOffset = 0.5f;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -74,6 +89,14 @@ public class PlayerMovement : MonoBehaviour
         jumpAction = InputSystem.actions.FindAction("Player/Jump");
 
         _groundLayer = LayerMask.GetMask("Ground");
+
+        originalHatPosition = hatController.transform.localPosition;
+
+        hatJumpPosition = originalHatPosition;
+        hatJumpPosition.y += hatHeightJumpOffset;
+
+        hatWallPosition = originalHatPosition;
+        hatWallPosition.y += hatHeightWallOffset;
     }
 
     private void Update()
@@ -81,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         _inputX = moveAction.ReadValue<Vector2>().x;
 
         UpdateMovementState();
-        UpdateMoveAnimation(); 
+        UpdateMoveAnimation();
     }
 
     private void FixedUpdate()
@@ -185,6 +208,28 @@ public class PlayerMovement : MonoBehaviour
     // Play animation base don Movement State and Direction
     private void UpdateMoveAnimation()
     {
+        if (facingDirection == FacingDirection.Right)
+        {
+            hatController.hatSpriteRenderer.flipX = true;
+        }
+        else
+        {
+            hatController.hatSpriteRenderer.flipX = false;
+        }
+
+        if (movementState == MovemenState.Jumping)
+        {
+            hatController.gameObject.transform.localPosition = hatJumpPosition;
+        }
+        else if (movementState == MovemenState.WallHanging)
+        {
+            hatController.gameObject.transform.localPosition = hatWallPosition;
+        }
+        else
+        {
+            hatController.gameObject.transform.localPosition = originalHatPosition;
+        }
+
         switch (movementState)
         {
             case MovemenState.Idle:
