@@ -108,14 +108,14 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (_isTouchingLeftWall())
             {
-                animator.Play(animJumpFromWallLeft.name);
+                animator.Play(animJumpFromWallRight.name);
                 facingDirection = FacingDirection.Right;
                 _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
                 _wallJumpLockTimer = wallJumpLockDuration;
             }
             else if (_isTouchingRightWall())
             {
-                animator.Play(animJumpFromWallRight.name);
+                animator.Play(animJumpFromWallLeft.name);
                 facingDirection = FacingDirection.Left;
                 _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
                 _wallJumpLockTimer = wallJumpLockDuration;
