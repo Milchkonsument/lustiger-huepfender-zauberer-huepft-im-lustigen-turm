@@ -1,10 +1,11 @@
 using System.Drawing;
+using UnityEditor.AdaptivePerformance.Editor;
 using UnityEngine;
 using static PlayerMovement;
 
 public class PlayerHatController : MonoBehaviour
 {
-   public SpriteRenderer hatSpriteRenderer;
+    public SpriteRenderer hatSpriteRenderer;
 
     [SerializeField] protected Sprite purpleHatSprite;
     [SerializeField] protected Sprite redHatSprite;
@@ -61,7 +62,18 @@ public class PlayerHatController : MonoBehaviour
 
     public void SetHat(HatColor color)
     {
-        // TODO
+        hatColor = color;
+        SetSprite(hatColor);
+    }
+
+    public void AddHat()
+    {
+        hatColor = (HatColor)(((int)hatColor + 1) > 3 ? 3 : (int)hatColor + 1);
+        SetSprite(hatColor);
+    }
+
+    private void SetSprite(HatColor color)
+    {
         switch (color)
         {
             case HatColor.Purple:
@@ -77,8 +89,6 @@ public class PlayerHatController : MonoBehaviour
                 hatSpriteRenderer.sprite = noneSprite;
                 break;
         }
-
-        hatColor = color;
     }
 
     [ContextMenu("Test Dissolve")]
@@ -104,7 +114,7 @@ public class PlayerHatController : MonoBehaviour
                 break;
 
             case HatColor.None:
-                
+
                 break;
         }
     }

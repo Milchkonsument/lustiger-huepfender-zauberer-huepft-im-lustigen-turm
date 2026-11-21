@@ -4849,6 +4849,7 @@ GameObject:
   - component: {fileID: 4651421148761800941}
   - component: {fileID: 2951662679952248895}
   - component: {fileID: -1282120639930110743}
+  - component: {fileID: 2335844266684657116}
   m_Layer: 0
   m_Name: Hat
   m_TagString: Untagged
@@ -5005,3 +5006,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Moving
   IsVertical: 0
   MaxExtent: 0.5
+--- !u!114 &2335844266684657116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8709155141183178557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5664bcebcdf58042a6425288cfdf8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HatItem
+  hatColor: 1
+  purpleHatSprite: {fileID: 2890182146494138697, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
+  redHatSprite: {fileID: 5229185757152501556, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
+  blueHatSprite: {fileID: -5434322855039686461, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
+  hatSpriteRenderer: {fileID: 4882480732659363185}
