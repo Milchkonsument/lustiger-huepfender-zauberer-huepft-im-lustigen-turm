@@ -85,13 +85,15 @@ public class GameManager : Singleton<GameManager>
     {
         _lastGeneratedHeight = maxY;
 
+        Debug.Log($"{minY} {maxY} // {_bounds.bounds.min.x} {_bounds.bounds.max.x}");
+
         for (float y = minY; y < maxY; y += ObstacleSpacing.y)
         {
             int cnt = 0;
 
             // do
             // {
-            for (float x = -_bounds.bounds.min.x; x < _bounds.bounds.max.x; x += ObstacleSpacing.x)
+            for (float x = _bounds.bounds.min.x; x < _bounds.bounds.max.x; x += ObstacleSpacing.x)
             {
                 if (Random.Range(0f, 1f) < SpawnRate)
                 {

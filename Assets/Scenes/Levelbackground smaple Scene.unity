@@ -251,8 +251,8 @@ Transform:
   m_GameObject: {fileID: 10347772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.98, z: 1}
-  m_LocalScale: {x: 6.9, y: 6, z: 1}
+  m_LocalPosition: {x: 0, y: -1.6248, z: 1}
+  m_LocalScale: {x: 6.9, y: 6.7103996, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1297,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: 996019757}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: SpawnRate
-      value: 0.025
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6587754285149671826, guid: 04cc5790108e77c3486c7be219b31f6e, type: 3}
       propertyPath: ObstacleSpacing.x
