@@ -7,7 +7,6 @@ public class GameManager : Singleton<GameManager>
     [Header("Options")]
     [Range(0.1f, 10f)] public float InitialSpawnRate = 1f;
     [Range(0f, 1f)] public float DifficultyIncreaseByUnitClimbed = 0.05f;
-    [Range(0f, 1f)] public float FallSpeedIncreaseByUnitClimbed = 0.05f;
 
     [Header("Components")]
     public SpriteRenderer TowerBounds;
