@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 using static PlayerMovement;
 
@@ -8,6 +9,7 @@ public class PlayerHatController : MonoBehaviour
     [SerializeField] protected Sprite purpleHatSprite;
     [SerializeField] protected Sprite redHatSprite;
     [SerializeField] protected Sprite blueHatSprite;
+    [SerializeField] protected Sprite noneSprite;
 
     public HatColor hatColor = HatColor.None;
 
@@ -22,6 +24,8 @@ public class PlayerHatController : MonoBehaviour
     [SerializeField] protected AnimationClip redToPurpleAnim;
     [SerializeField] protected AnimationClip blueToRedAnim;
 
+    protected bool bIsDissolving = false;
+
     private void Start()
     {
         SetHat(hatColor);
@@ -29,11 +33,15 @@ public class PlayerHatController : MonoBehaviour
 
     private void Update()
     {
+
         UpdateAnimation();
     }
 
     protected void UpdateAnimation()
     {
+        if (bIsDissolving)
+            return;
+
         switch (hatColor)
         {
             case HatColor.Purple:
@@ -66,15 +74,44 @@ public class PlayerHatController : MonoBehaviour
                 hatSpriteRenderer.sprite = blueHatSprite;
                 break;
             case HatColor.None:
-                hatSpriteRenderer.sprite = null;
+                hatSpriteRenderer.sprite = noneSprite;
                 break;
         }
 
         hatColor = color;
     }
 
+    [ContextMenu("Test Dissolve")]
+    public void PlayDissovleAnimation()
+    {
+        bIsDissolving = true;
+
+        switch (hatColor)
+        {
+            case HatColor.Purple:
+                animator.Play(purpleToNoneAnim.name);
+                hatColor = HatColor.None;
+                break;
+
+            case HatColor.Red:
+                animator.Play(redToPurpleAnim.name);
+                hatColor = HatColor.Purple;
+                break;
+
+            case HatColor.Blue:
+                animator.Play(blueToRedAnim.name);
+                hatColor = HatColor.Red;
+                break;
+
+            case HatColor.None:
+                
+                break;
+        }
+    }
+
     public void OnDissolveAnimFinished()
     {
+        bIsDissolving = false;
         SetHat(hatColor);
     }
 }
