@@ -56,7 +56,7 @@ public class AudioManager : Singleton<AudioManager>
         if (s == null)
             return;
 
-        musicSource.Stop();
+        musicSource.Pause();
         musicSource.loop = s.loop;
         musicSource.clip = s.clip;
         musicSource.Play();
@@ -69,7 +69,7 @@ public class AudioManager : Singleton<AudioManager>
         if (s == null)
             return;
 
-        sfxSource.Stop();
+        sfxSource.Pause();
         sfxSource.loop = s.loop;
         sfxSource.clip = s.clip;
         sfxSource.Play();
