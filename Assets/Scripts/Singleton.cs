@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
+    public abstract bool DestroyOnLoad { get; }
     private static T _instance;
     public static T I
     {
@@ -23,6 +24,9 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this);
+        if (DestroyOnLoad == false)
+        {
+            DontDestroyOnLoad(this);
+        }
     }
 }

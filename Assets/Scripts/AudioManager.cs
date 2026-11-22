@@ -5,20 +5,22 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class Sound
 {
-   public string name;
-   public AudioClip clip;
+    public string name;
+    public AudioClip clip;
 
-   public bool loop;
+    public bool loop;
 }
 
 public class AudioManager : Singleton<AudioManager>
 {
 
-   public Sound[] musicSounds, sfxSounds;
-   public AudioSource musicSource, sfxSource;
+    public Sound[] musicSounds, sfxSounds;
+    public AudioSource musicSource, sfxSource;
 
-   [Range(0f, 1f)] public float MusicVolume;
-   [Range(0f, 1f)] public float SFXVolume;
+    [Range(0f, 1f)] public float MusicVolume;
+    [Range(0f, 1f)] public float SFXVolume;
+
+    public override bool DestroyOnLoad => false;
 
     private void Start()
     {
@@ -51,7 +53,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound s = Array.Find(musicSounds, x => x.name == name);
 
-        if(s == null)
+        if (s == null)
             return;
 
         musicSource.Stop();
@@ -64,7 +66,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound s = Array.Find(sfxSounds, x => x.name == name);
 
-        if(s == null)
+        if (s == null)
             return;
 
         sfxSource.Stop();
@@ -73,12 +75,12 @@ public class AudioManager : Singleton<AudioManager>
         sfxSource.Play();
     }
 
-    public void SetMusicVolume (float value)
+    public void SetMusicVolume(float value)
     {
         musicSource.volume = value;
     }
 
-    public void SetSFXVolume (float value)
+    public void SetSFXVolume(float value)
     {
         sfxSource.volume = value;
     }

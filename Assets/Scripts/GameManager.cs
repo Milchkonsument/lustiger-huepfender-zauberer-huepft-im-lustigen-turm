@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -17,6 +19,8 @@ public class GameManager : Singleton<GameManager>
     public SpriteRenderer _bounds;
     public PlayerMovement Player;
     public TMPro.TextMeshProUGUI CurrentScoreText;
+    public TMPro.TextMeshProUGUI DeadzoneText;
+    public Deadzone Deadzone;
 
     // ---------------------------
 
@@ -27,6 +31,8 @@ public class GameManager : Singleton<GameManager>
     private MonoList<Obstacle> _currentObstacleInstances = new();
     private float _lastGeneratedHeight = 0f;
 
+    public override bool DestroyOnLoad => true;
+
     public void EndGame()
     {
         // TODO show UI
@@ -35,9 +41,7 @@ public class GameManager : Singleton<GameManager>
 
     public void RestartGame()
     {
-        _currentObstacleInstances.ClearAndDestroy();
-        Player.transform.position = _initialPlayerPos;
-        _currentPlayerMaxHeight = 0f;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
     void Start()
@@ -57,6 +61,7 @@ public class GameManager : Singleton<GameManager>
     private void UpdateUI()
     {
         CurrentScoreText.text = Mathf.RoundToInt(_currentPlayerMaxHeight).ToString();
+        DeadzoneText.text = $"Certain Death : {Mathf.RoundToInt(Player.transform.position.y - Deadzone.transform.position.y)}m ↓";
     }
 
     private void UpdateObstacles()
