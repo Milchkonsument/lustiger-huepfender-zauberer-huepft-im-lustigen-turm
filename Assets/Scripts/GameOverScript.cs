@@ -7,8 +7,8 @@ public class GameOverScript : MonoBehaviour
     public TMPro.TextMeshProUGUI HighscoreField;
     void OnEnable()
     {
-        HighscoreField.SetText("Your score: " + ScoreManager.I.currentPlayerName + " " + Mathf.RoundToInt(ScoreManager.I.currentscore).ToString());
-        HighscoreField.SetText("HighScore: " + ScoreManager.I.highScorePlayerName + " " + Mathf.RoundToInt(ScoreManager.I.highscore).ToString());
+        ScoreField.SetText("Your score: " + Mathf.RoundToInt(ScoreManager.I.currentscore).ToString());
+        HighscoreField.SetText("HighScore: " + Mathf.RoundToInt(ScoreManager.I.highscore).ToString() + "(" + ScoreManager.I.highScorePlayerName + ")");
     }
 
     public void Restart()

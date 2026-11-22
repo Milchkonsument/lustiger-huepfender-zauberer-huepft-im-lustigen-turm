@@ -1011,8 +1011,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1186,8 +1186,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1450,8 +1450,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: OK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &598100820
@@ -1662,8 +1662,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Du willst wissen wieviel dein Auto wert ist ? '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1799,7 +1799,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: OK
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1866,7 +1866,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &695807105
@@ -2222,8 +2222,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &772831285
@@ -2359,8 +2359,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Lustiger h\xFCpfender Zauberer h\xFCpft \nim lustigen Turm"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2930,8 +2930,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3067,8 +3067,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3134,7 +3134,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1160803361
@@ -3293,7 +3293,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: SFX
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3360,7 +3360,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1450367471
@@ -3430,8 +3430,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Wie hei\xDFt'n du so?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
-  m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
+  m_sharedMaterial: {fileID: 7890768560532072505, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3497,7 +3497,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1450447375
@@ -4403,7 +4403,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Music
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: da3ea82178138d643875b49bbe823a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 00afd343e38e59349a62ceea4de3b37e, type: 2}
   m_sharedMaterial: {fileID: 2131174084454962370, guid: da3ea82178138d643875b49bbe823a11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4470,7 +4470,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2117876920
