@@ -48,6 +48,7 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator RestartGame()
     {
         yield return PlayDeathAnim();
+        Time.timeScale = 0f;
     }
 
     private IEnumerator PlayDeathAnim()
@@ -64,7 +65,8 @@ public class GameManager : Singleton<GameManager>
 
         if (rr != null)
         {
-            r.color = Color.red;
+            rr.gameObject.SetActive(false);
+            //r.color = Color.red;
         }
         else
         {
@@ -88,6 +90,7 @@ public class GameManager : Singleton<GameManager>
 
     void Start()
     {
+        Time.timeScale = 1f;
         _obstaclePool = Resources.LoadAll<Obstacle>("Prefabs").ToList();
         _initialPlayerPos = Player.transform.position;
         _initDeadzoneSpeed = Deadzone.deadZoneSpeed;
