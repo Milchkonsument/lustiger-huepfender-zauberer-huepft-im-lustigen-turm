@@ -10,7 +10,7 @@ public class ScoreManager : Singleton<ScoreManager>
     public string highScorePlayerName = "Irgendsoein Typ";
     public int highscore = 67;
 
-    public override bool DestroyOnLoad => true;
+    public override bool DestroyOnLoad => false;
 
     
     public void SetName(string newName)
