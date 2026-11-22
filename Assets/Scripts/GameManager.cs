@@ -48,7 +48,6 @@ public class GameManager : Singleton<GameManager>
     private IEnumerator RestartGame()
     {
         yield return PlayDeathAnim();
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     private IEnumerator PlayDeathAnim()
