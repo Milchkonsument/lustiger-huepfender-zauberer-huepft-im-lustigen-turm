@@ -109,7 +109,7 @@ MonoBehaviour:
   purpleHatSprite: {fileID: 2890182146494138697, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   redHatSprite: {fileID: -5434322855039686461, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 5229185757152501556, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
-  hatSprite: {fileID: 4127946472048748218}
+  hatSpriteRenderer: {fileID: 4127946472048748218}
 --- !u!61 &8207397551586991910
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.6666667, y: 0.6666667}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
