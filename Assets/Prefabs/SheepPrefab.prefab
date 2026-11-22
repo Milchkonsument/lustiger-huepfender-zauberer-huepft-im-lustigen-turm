@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 142407079673785513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 5288405895290232633}
   - component: {fileID: 7237035365047374833}
   - component: {fileID: 2724873886165601052}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SheepPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,5 +213,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.029918592}
+  m_Radius: 0.4180491
