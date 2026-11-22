@@ -55,11 +55,21 @@ public class GameManager : Singleton<GameManager>
     {
         Player.Blood.gameObject.SetActive(true);
         var r = Player.GetComponent<SpriteRenderer>();
+        var rr = Player.hatController.hatSpriteRenderer;
         Time.timeScale = 0.5f;
 
         if (r != null)
         {
             r.color = Color.red;
+        }
+
+        if (rr != null)
+        {
+            r.color = Color.red;
+        }
+        else
+        {
+            Debug.Log("FAAHH");
         }
 
         for (int i = 0; i < 10; i++)
