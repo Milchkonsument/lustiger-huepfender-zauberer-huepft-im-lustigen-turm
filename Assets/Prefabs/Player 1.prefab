@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   hatSpriteRenderer: {fileID: 8951144512431168903}
+  HatBackHalf: {fileID: 1465338585873687671}
   purpleHatSprite: {fileID: -8140568687206083934, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   redHatSprite: {fileID: -7313524825897280498, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 1255586332865947568, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}

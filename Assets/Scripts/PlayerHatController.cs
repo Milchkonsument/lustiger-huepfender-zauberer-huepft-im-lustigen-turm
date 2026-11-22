@@ -6,6 +6,7 @@ using static PlayerMovement;
 public class PlayerHatController : MonoBehaviour
 {
     public SpriteRenderer hatSpriteRenderer;
+    public GameObject HatBackHalf;
 
     [SerializeField] protected Sprite purpleHatSprite;
     [SerializeField] protected Sprite redHatSprite;
@@ -78,15 +79,19 @@ public class PlayerHatController : MonoBehaviour
         {
             case HatColor.Purple:
                 hatSpriteRenderer.sprite = purpleHatSprite;
+                HatBackHalf.SetActive(true);
                 break;
             case HatColor.Red:
                 hatSpriteRenderer.sprite = redHatSprite;
+                HatBackHalf.SetActive(true);
                 break;
             case HatColor.Blue:
                 hatSpriteRenderer.sprite = blueHatSprite;
+                HatBackHalf.SetActive(true);
                 break;
             case HatColor.None:
                 hatSpriteRenderer.sprite = noneSprite;
+                HatBackHalf.SetActive(false);
                 break;
         }
     }
