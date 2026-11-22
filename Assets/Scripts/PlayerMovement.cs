@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected AnimationClip animJumpFromWallRight;
     [SerializeField] protected AnimationClip animHangWallIdleRight;
 
-
+    public NeedleController needleController;
     public PlayerHatController hatController;
     protected Vector3 originalHatPosition;
     protected Vector3 hatJumpPosition;
@@ -110,9 +110,9 @@ public class PlayerMovement : MonoBehaviour
         UpdateMovementState();
         UpdateMoveAnimation();
 
-        if (abilityAction.triggered && !isUsingAbility && !hatController.hatColor.Equals(HatColor.None))
+        if (abilityAction.triggered)
         {
-            StartNadelAbillity();
+            ToggleNadelAbillity();
         }
     }
 
@@ -275,6 +275,18 @@ public class PlayerMovement : MonoBehaviour
 
                 // Do nothing basically
 
+                if (!_isTouchingRightWall() && !_isTouchingLeftWall())
+                {
+                    if (facingDirection == FacingDirection.Right)
+                    {
+                        animator.Play(animJumpIdleRight.name);
+                    }
+                    else
+                    {
+                        animator.Play(animJumpIdleLeft.name);
+                    }
+                }
+
                 break;
             case MovemenState.WallHanging:
                 if (facingDirection == FacingDirection.Right)
@@ -301,12 +313,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void StartNadelAbillity()
+    private void ToggleNadelAbillity()
     {
-        //time in slowmotion machen
-        isUsingAbility = true;
-        AudioManager.Instance.PlaySFX("Sewing");
-        Instantiate(nadelprefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+        if (isUsingAbility)
+        {
+            if (needleController != null)
+            {
+                isUsingAbility = false;
+                needleController.EndAbility();
+            }
+        }
+        else if (!hatController.hatColor.Equals(HatColor.None))
+        {
+            //time in slowmotion machen
+            isUsingAbility = true;
+            AudioManager.Instance.PlaySFX("Sewing");
+            GameObject needleControllergameObject = Instantiate(nadelprefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+            needleController = needleControllergameObject.GetComponent<NeedleController>();
+        }
     }
 
     public void setAbility(bool value)

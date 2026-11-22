@@ -153,7 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   abilitySteps: 20
-  abilityDelay: 0.025
+  abilityDelay: 0.007
+  timeScale: 0.1
 --- !u!1 &7144074168196981234
 GameObject:
   m_ObjectHideFlags: 0
