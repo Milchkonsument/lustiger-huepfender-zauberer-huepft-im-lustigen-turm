@@ -287,6 +287,7 @@ MonoBehaviour:
   animJumpToWallRight: {fileID: 7400000, guid: b21d845261c2e9a45a1d054b575aab84, type: 2}
   animJumpFromWallRight: {fileID: 7400000, guid: a4efaf415ca361142be106b0b54c5963, type: 2}
   animHangWallIdleRight: {fileID: 7400000, guid: 417783e16466d0749bf7addd7455ca72, type: 2}
+  needleController: {fileID: 0}
   hatController: {fileID: 4269232501362452572}
   hatHeightJumpOffset: 10
   hatHeightWallOffset: 0.5
@@ -457,7 +458,7 @@ MonoBehaviour:
   purpleHatSprite: {fileID: -8140568687206083934, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   redHatSprite: {fileID: -7313524825897280498, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
   blueHatSprite: {fileID: 1255586332865947568, guid: a9ddcadcae3331045b2df6580fd8ffef, type: 3}
-  noneSprite: {fileID: 0}
+  noneSprite: {fileID: -7809588345900322892, guid: 7fbc636aec4b61f4f81b48aba8ea684e, type: 3}
   hatColor: 1
   animator: {fileID: 654368284555425148}
   noneIdle: {fileID: 7400000, guid: 77dbd7eed2d0c8e49a67ac4de17bf625, type: 2}
