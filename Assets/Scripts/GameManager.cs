@@ -19,12 +19,8 @@ public class GameManager : Singleton<GameManager>
     public SpriteRenderer _bounds;
     public PlayerMovement Player;
     public TMPro.TextMeshProUGUI CurrentScoreText;
-<<<<<<< Updated upstream
     public TMPro.TextMeshProUGUI DeadzoneText;
     public Deadzone Deadzone;
-=======
-    public GameObject GameOverPanel;
->>>>>>> Stashed changes
 
     // ---------------------------
 
@@ -35,14 +31,8 @@ public class GameManager : Singleton<GameManager>
     private MonoList<Obstacle> _currentObstacleInstances = new();
     private float _lastGeneratedHeight = 0f;
 
-<<<<<<< Updated upstream
     public override bool DestroyOnLoad => true;
 
-=======
-    private string currentPlayerName = "";
-    private string highScorePlayerName = "The guy your girlfriend told you not to worry about";
-    private int highScore = 0;
->>>>>>> Stashed changes
     public void EndGame()
     {
         // TODO show UI
@@ -70,16 +60,13 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateUI()
     {
-<<<<<<< Updated upstream
         CurrentScoreText.text = Mathf.RoundToInt(_currentPlayerMaxHeight).ToString();
         DeadzoneText.text = $"Certain Death : {Mathf.RoundToInt(Player.transform.position.y - Deadzone.transform.position.y)}m ↓";
-=======
         int score = Mathf.RoundToInt(_currentPlayerMaxHeight);
         CurrentScoreText.text =score.ToString();
 
         ScoreManager.I.SetScore(score);
         
->>>>>>> Stashed changes
     }
 
     private void UpdateObstacles()
@@ -129,10 +116,5 @@ public class GameManager : Singleton<GameManager>
                 }
             }
         }
-    }
-
-    public void setPlayerName(string newName)
-    {
-        currentPlayerName = newName;
     }
 }
