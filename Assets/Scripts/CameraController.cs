@@ -14,8 +14,7 @@ public class CameraController : MonoBehaviour
         _playerMovement = player.GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (_playerMovement.isUsingAbility)
         {
