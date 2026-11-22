@@ -24,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     public TMPro.TextMeshProUGUI CurrentScoreText;
     public TMPro.TextMeshProUGUI DeadzoneText;
     public Deadzone Deadzone;
+    public GameObject GameOverPanel;
 
     // ---------------------------
 
@@ -41,6 +42,7 @@ public class GameManager : Singleton<GameManager>
     {
         // TODO show UI
         StartCoroutine(RestartGame());
+        GameOverPanel.SetActive(true);
     }
 
     private IEnumerator RestartGame()
@@ -97,8 +99,14 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateUI()
     {
-        CurrentScoreText.text = Mathf.RoundToInt(_currentPlayerMaxHeight).ToString();
+        int score = Mathf.RoundToInt(_currentPlayerMaxHeight);
+
+        CurrentScoreText.text = score.ToString();
         DeadzoneText.text = $"Certain Death : {Mathf.RoundToInt(Player.transform.position.y - Deadzone.transform.position.y)}m ↓";
+        CurrentScoreText.text = score.ToString();
+
+        ScoreManager.I.SetScore(score);
+
     }
 
     private void UpdateObstacles()

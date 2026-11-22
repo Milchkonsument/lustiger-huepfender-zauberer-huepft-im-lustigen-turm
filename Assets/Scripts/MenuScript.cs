@@ -7,18 +7,25 @@ public class MenuScript : MonoBehaviour
 {
    public Slider MusicVolumeSlider;
    public Slider SFXVolumeSlider;
+   public TMPro.TMP_InputField NameInput;
 
+   public TMPro.TextMeshProUGUI HighscoreField;
 
-   public void StartSceneByID(int ID)
+    public void Start()
+    {
+      HighscoreField.SetText("HighScore: " + ScoreManager.I.highScorePlayerName +" "+ Mathf.RoundToInt(ScoreManager.I.highscore).ToString());
+    }
+    public void StartGame()
    {
       AudioManager.I.PlaySFX("UI_Click");
-      SceneManager.LoadSceneAsync(ID);
+      SceneManager.LoadSceneAsync(1);
+      ScoreManager.I.SetName(NameInput.text);
    }
 
    public void QuitGame()
    {
       AudioManager.I.PlaySFX("UI_Click");
-   Application.Quit();
+      Application.Quit();
    }
 
    public void HandleSFXVolumeSlider()
@@ -28,6 +35,5 @@ public class MenuScript : MonoBehaviour
    public void HandleMusicVolumeSlider()
    {
       AudioManager.I.SetMusicVolume(MusicVolumeSlider.value);
-      
    }
 }
