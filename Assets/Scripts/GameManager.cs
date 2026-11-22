@@ -40,14 +40,10 @@ public class GameManager : Singleton<GameManager>
         _currentPlayerMaxHeight = 0f;
     }
 
-    void Awake()
+    void Start()
     {
         _obstaclePool = Resources.LoadAll<Obstacle>("Prefabs").ToList();
         _initialPlayerPos = Player.transform.position;
-    }
-
-    void Start()
-    {
         SpawnObstacles(_bounds.bounds.min.y, _bounds.bounds.max.y * 200);
     }
 
