@@ -19,7 +19,7 @@ public class MenuScript : MonoBehaviour
    {
       AudioManager.I.PlaySFX("UI_Click");
       SceneManager.LoadSceneAsync(1);
-      GameManager.I.setPlayerName(NameInput.text);
+      ScoreManager.I.SetName(NameInput.text);
    }
 
    public void QuitGame()
