@@ -189,6 +189,12 @@ public class PlayerMovement : MonoBehaviour
             if (_isTouchingRightWall())
             {
                 movementState = MovemenState.WallHanging;
+                facingDirection = FacingDirection.Left;
+            }
+            else if (_isTouchingLeftWall())
+            {
+                movementState = MovemenState.WallHanging;
+                facingDirection = FacingDirection.Right;
             }
             else
             {
@@ -292,10 +298,12 @@ public class PlayerMovement : MonoBehaviour
                 if (facingDirection == FacingDirection.Right)
                 {
                     animator.Play(animHangWallIdleRight.name);
+                    facingDirection = FacingDirection.Right;
                 }
                 else
                 {
                     animator.Play(animHangWallIdleLeft.name);
+                    facingDirection = FacingDirection.Left;
                 }
                 break;
         }

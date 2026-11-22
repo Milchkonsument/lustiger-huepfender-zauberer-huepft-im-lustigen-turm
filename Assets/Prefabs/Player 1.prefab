@@ -279,14 +279,14 @@ MonoBehaviour:
   animJumpIdleLeft: {fileID: 7400000, guid: e784ec5f170801040b272e6e3a7dec66, type: 2}
   animJumpToWallLeft: {fileID: 7400000, guid: 40f3f702a70d3d14e9b633ef486e18f1, type: 2}
   animJumpFromWallLeft: {fileID: 7400000, guid: e186b525ef3cb7d4a9c7308bc039bf0e, type: 2}
-  animHangWallIdleLeft: {fileID: 7400000, guid: 6cc3df01c696ec1449850ddeb4065e96, type: 2}
+  animHangWallIdleLeft: {fileID: 7400000, guid: 417783e16466d0749bf7addd7455ca72, type: 2}
   animIdleRight: {fileID: 7400000, guid: c1d5e835b9435234087aed308d6af794, type: 2}
   animRunRight: {fileID: 7400000, guid: f453b4c0e26815f4aac93b8477f30d21, type: 2}
   animJumpRight: {fileID: 7400000, guid: 9ba00f9a3867feb4db1db625b4532f62, type: 2}
   animJumpIdleRight: {fileID: 7400000, guid: 0e5a0ea4f4ba99f43a23ab53feac5264, type: 2}
   animJumpToWallRight: {fileID: 7400000, guid: b21d845261c2e9a45a1d054b575aab84, type: 2}
   animJumpFromWallRight: {fileID: 7400000, guid: a4efaf415ca361142be106b0b54c5963, type: 2}
-  animHangWallIdleRight: {fileID: 7400000, guid: 417783e16466d0749bf7addd7455ca72, type: 2}
+  animHangWallIdleRight: {fileID: 7400000, guid: 6cc3df01c696ec1449850ddeb4065e96, type: 2}
   needleController: {fileID: 0}
   hatController: {fileID: 4269232501362452572}
   hatHeightJumpOffset: 10
