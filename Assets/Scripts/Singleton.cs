@@ -15,7 +15,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             if (_instance == null)
             {
-                _instance = new GameObject($"{typeof(T)}").AddComponent<T>();
+                _instance = new GameObject($"{typeof(T)} (runtime)").AddComponent<T>();
             }
 
             return _instance;

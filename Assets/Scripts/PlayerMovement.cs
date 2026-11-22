@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     public NeedleController needleController;
     public PlayerHatController hatController;
+    public ParticleSystem Blood;
     protected Vector3 originalHatPosition;
     protected Vector3 hatJumpPosition;
     protected Vector3 hatWallPosition;

@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Multiplayer.Center.Common;
 using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public Vector2 ObstacleSpacing = Vector2.one;
     public float ObstacleWallPadding = 1f;
     public float NoiseScale = 1f;
+    public float DeadzoneSpeedIncreaseByDifficultyPoint = 0.5f;
 
     [Header("Components")]
     public SpriteRenderer _bounds;
@@ -30,24 +33,53 @@ public class GameManager : Singleton<GameManager>
     private bool _isGameStarted = true;
     private MonoList<Obstacle> _currentObstacleInstances = new();
     private float _lastGeneratedHeight = 0f;
+    private float _initDeadzoneSpeed;
 
     public override bool DestroyOnLoad => true;
 
     public void EndGame()
     {
         // TODO show UI
-        RestartGame();
+        StartCoroutine(RestartGame());
     }
 
-    public void RestartGame()
+    private IEnumerator RestartGame()
     {
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        yield return PlayDeathAnim();
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
+    }
+
+    private IEnumerator PlayDeathAnim()
+    {
+        Player.Blood.gameObject.SetActive(true);
+        var r = Player.GetComponent<SpriteRenderer>();
+        Time.timeScale = 0.5f;
+
+        if (r != null)
+        {
+            r.color = Color.red;
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (i % 2 == 0)
+            {
+                Player.transform.position += new Vector3(0.025f, 0f, 0f);
+            }
+            else
+            {
+                Player.transform.position -= new Vector3(0.025f, 0f, 0f);
+            }
+
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     void Start()
     {
         _obstaclePool = Resources.LoadAll<Obstacle>("Prefabs").ToList();
         _initialPlayerPos = Player.transform.position;
+        _initDeadzoneSpeed = Deadzone.deadZoneSpeed;
         SpawnObstacles(_bounds.bounds.min.y, _bounds.bounds.max.y * 200);
     }
 
@@ -56,6 +88,11 @@ public class GameManager : Singleton<GameManager>
         UpdateMaxPlayerHeight();
         UpdateObstacles();
         UpdateUI();
+    }
+
+    private void UpdateDeadzoneSpeed()
+    {
+        Deadzone.deadZoneSpeed = _initDeadzoneSpeed + (DeadzoneSpeedIncreaseByDifficultyPoint * GetDifficultyForHeight(_currentPlayerMaxHeight));
     }
 
     private void UpdateUI()
