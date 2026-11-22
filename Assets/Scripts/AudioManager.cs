@@ -11,9 +11,8 @@ public class Sound
    public bool loop;
 }
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
-   public static AudioManager Instance; 
 
    public Sound[] musicSounds, sfxSounds;
    public AudioSource musicSource, sfxSource;
@@ -21,25 +20,9 @@ public class AudioManager : MonoBehaviour
    [Range(0f, 1f)] public float MusicVolume;
    [Range(0f, 1f)] public float SFXVolume;
 
-
-   private void Awake()
-    {
-         if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-
-
-    }
-
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         SceneManager.activeSceneChanged += SceneManager_activeSceneChanged;
 
         if (SceneManager.GetActiveScene().name == "MainMenu")

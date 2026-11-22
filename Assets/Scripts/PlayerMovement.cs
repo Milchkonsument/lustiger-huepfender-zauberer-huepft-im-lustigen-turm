@@ -139,12 +139,12 @@ public class PlayerMovement : MonoBehaviour
                     _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, _rb.linearVelocity.y);
                     _rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                     PlayJumpAnimation();
-                    AudioManager.Instance.PlaySFX("Jump");
+                    AudioManager.I.PlaySFX("Jump");
                 }
                 else if (_isTouchingLeftWall())
                 {
                     animator.Play(animJumpFromWallRight.name);
-                    AudioManager.Instance.PlaySFX("WallJump");
+                    AudioManager.I.PlaySFX("WallJump");
                     facingDirection = FacingDirection.Right;
                     _rb.linearVelocity = new Vector2(wallJumpForce.x, wallJumpForce.y);
                     _wallJumpLockTimer = wallJumpLockDuration;
@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
                 else if (_isTouchingRightWall())
                 {
                     animator.Play(animJumpFromWallLeft.name);
-                    AudioManager.Instance.PlaySFX("WallJump");
+                    AudioManager.I.PlaySFX("WallJump");
                     facingDirection = FacingDirection.Left;
                     _rb.linearVelocity = new Vector2(-wallJumpForce.x, wallJumpForce.y);
                     _wallJumpLockTimer = wallJumpLockDuration;
@@ -335,7 +335,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //time in slowmotion machen
             isUsingAbility = true;
-            AudioManager.Instance.PlaySFX("Sewing");
+            AudioManager.I.PlaySFX("Sewing");
             GameObject needleControllergameObject = Instantiate(nadelprefab, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
             needleController = needleControllergameObject.GetComponent<NeedleController>();
         }

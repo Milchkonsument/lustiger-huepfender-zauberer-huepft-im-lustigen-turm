@@ -18,7 +18,7 @@ public class Deadzone : MonoBehaviour
        if (other.transform.CompareTag("Player"))
        {
            //Set Game State to Dead
-            AudioManager.Instance.PlaySFX("Fall");
+            AudioManager.I.PlaySFX("Fall");
            SceneManager.LoadScene(_restartScene);
        }
    }
