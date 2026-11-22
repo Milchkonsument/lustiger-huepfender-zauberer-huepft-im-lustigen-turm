@@ -19,7 +19,7 @@ public class Deadzone : MonoBehaviour
        {
            //Set Game State to Dead
             AudioManager.I.PlaySFX("Fall");
-           SceneManager.LoadScene(_restartScene);
+           GameManager.I.EndGame();
        }
    }
 

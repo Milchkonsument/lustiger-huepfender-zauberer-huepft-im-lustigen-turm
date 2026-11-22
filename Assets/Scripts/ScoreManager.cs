@@ -5,9 +5,9 @@ using UnityEngine;
 public class ScoreManager : Singleton<ScoreManager>
 {
     public string currentPlayerName;
-    public int currentscore = 67;
+    public int currentscore = 0;
 
-    public string highScorePlayerName = "THe guy she told you not to worry about";
+    public string highScorePlayerName = "Irgendsoein Typ";
     public int highscore = 67;
 
     public override bool DestroyOnLoad => true;
