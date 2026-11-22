@@ -15,6 +15,8 @@ public class NeedleController : MonoBehaviour
     private Transform _playerTransform;
     private PlayerMovement _playerMovement;
     private CameraController _mainCameraController;
+    protected float minXCoordinate = -6.0f;
+    protected float maxXCoordinate = 6.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,7 @@ public class NeedleController : MonoBehaviour
         _playerMovement.hatController.PlayDissovleAnimation();
         _mainCameraController = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraController>();
         _mainCameraController.needle = this.gameObject;
+
     }
 
     // Update is called once per frame
@@ -40,17 +43,26 @@ public class NeedleController : MonoBehaviour
             {
                 abilitySteps--;
 
-                transform.position = new Vector3(transform.position.x, transform.position.y + _gridSize,
+                Vector3 newPosition = new Vector3(transform.position.x, transform.position.y + _gridSize,
                     transform.position.z);
+
+                newPosition.x = Mathf.Clamp(newPosition.x, minXCoordinate, maxXCoordinate);
+
+                transform.position = newPosition;
+
                 _nextmoveTime = Time.time + abilityDelay;
             }
 
             if (_moveAction.IsPressed() && Time.time >= _nextmoveTime)
             {
                 abilitySteps--;
-                transform.position = new Vector3(transform.position.x + _moveAction.ReadValue<Vector2>().x * _gridSize,
+                Vector3 newPosition = new Vector3(transform.position.x + _moveAction.ReadValue<Vector2>().x * _gridSize,
                     transform.position.y + _moveAction.ReadValue<Vector2>().y * _gridSize, transform.position.z);
                 _nextmoveTime = Time.time + abilityDelay;
+
+                newPosition.x = Mathf.Clamp(newPosition.x, minXCoordinate, maxXCoordinate);
+
+                transform.position = newPosition;
             }
         }
 
